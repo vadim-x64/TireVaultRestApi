@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: tirevault-postgres
+    restart: no
+    environment:
+      POSTGRES_DB: TireVaultRestApi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1111
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: tirevault-backend
+    restart: no
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/TireVaultRestApi
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

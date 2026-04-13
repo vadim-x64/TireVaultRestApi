@@ -34,6 +34,11 @@
       "name": "spring.session.cookie.name",
       "type": "java.lang.String",
       "description": "Description for spring.session.cookie.name."
+    },
+    {
+      "name": "spring.flyway.locations",
+      "type": "java.lang.String",
+      "description": "Description for spring.flyway.locations."
     }
   ]
 }

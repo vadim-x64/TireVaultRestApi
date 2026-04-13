@@ -1,0 +1,39 @@
+{
+  "properties": [
+    {
+      "name": "spring.session.jdbc.initialize-schema",
+      "type": "java.lang.String",
+      "description": "Description for spring.session.jdbc.initialize-schema."
+    },
+    {
+      "name": "spring.session.store-type",
+      "type": "java.lang.String",
+      "description": "Description for spring.session.store-type."
+    },
+    {
+      "name": "spring.session.timeout",
+      "type": "java.lang.String",
+      "description": "Description for spring.session.timeout."
+    },
+    {
+      "name": "spring.session.servlet.store-type",
+      "type": "java.lang.String",
+      "description": "Description for spring.session.servlet.store-type."
+    },
+    {
+      "name": "spring.mvc.pathmatch.use-suffix-pattern",
+      "type": "java.lang.String",
+      "description": "Description for spring.mvc.pathmatch.use-suffix-pattern."
+    },
+    {
+      "name": "springdoc.show-mvc-controllers",
+      "type": "java.lang.String",
+      "description": "Description for springdoc.show-mvc-controllers."
+    },
+    {
+      "name": "spring.session.cookie.name",
+      "type": "java.lang.String",
+      "description": "Description for spring.session.cookie.name."
+    }
+  ]
+}

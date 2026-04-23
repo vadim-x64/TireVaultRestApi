@@ -20,6 +20,8 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "product_category_id", nullable = false)
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private ProductCategory category;
 
     @Column(nullable = false)

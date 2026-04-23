@@ -1,5 +1,6 @@
 package course.project.ua.tirevault.Entities.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,5 +32,6 @@ public class Vehicle {
 
     @ManyToMany(mappedBy = "vehicles", fetch = FetchType.LAZY)
     @ToString.Exclude
+    @JsonIgnore
     private List<Product> products;
 }

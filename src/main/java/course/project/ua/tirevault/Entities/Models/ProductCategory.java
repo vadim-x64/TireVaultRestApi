@@ -3,6 +3,7 @@ package course.project.ua.tirevault.Entities.Models;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "product_categories")
@@ -20,5 +21,8 @@ public class ProductCategory {
     private String name;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @JsonIgnore
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<Product> products;
 }

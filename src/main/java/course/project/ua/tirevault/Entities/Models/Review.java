@@ -1,5 +1,6 @@
 package course.project.ua.tirevault.Entities.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import course.project.ua.tirevault.Entities.Enums.ReviewTargetType;
 import jakarta.persistence.*;
 import lombok.*;
@@ -44,11 +45,13 @@ public class Review implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     @ToString.Exclude
+    @JsonIgnore
     private Review parent;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "reply_to_review_id")
     @ToString.Exclude
+    @JsonIgnore
     private Review replyToReview;
 
     @ManyToOne(fetch = FetchType.LAZY)

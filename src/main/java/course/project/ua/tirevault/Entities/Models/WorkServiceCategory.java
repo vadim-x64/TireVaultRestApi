@@ -2,7 +2,7 @@ package course.project.ua.tirevault.Entities.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 
 @Entity
@@ -21,5 +21,8 @@ public class WorkServiceCategory {
     private String name;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @JsonIgnore
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private List<WorkService> workServices;
 }

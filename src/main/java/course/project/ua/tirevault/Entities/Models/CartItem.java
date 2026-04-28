@@ -1,5 +1,6 @@
 package course.project.ua.tirevault.Entities.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
@@ -19,6 +20,7 @@ public class CartItem {
 
     @ManyToOne
     @JoinColumn(name = "cart_id", nullable = false)
+    @JsonIgnore
     private Cart cart;
 
     @ManyToOne(fetch = FetchType.EAGER)
